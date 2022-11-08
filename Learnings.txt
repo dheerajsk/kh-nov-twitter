@@ -1,7 +1,7 @@
 
 1. Creating React Project.
     npm create-react-app ProjectName
-    npx create-react-app ProjectName
+    npx create-react-app projectName
 
     npm => Node Package manager.
         => PackageManager.
@@ -15,3 +15,13 @@
 
    
     npx. => Execute a package, doesnt occupy space in application.
+
+2. Start react project.
+    npm start
+3. What is NPM and how to use it
+
+
+Folder Structure.
+    src=> contains source code.
+
+React -> App [js[html], css]
