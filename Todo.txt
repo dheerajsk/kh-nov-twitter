@@ -1,0 +1,4 @@
+
+1. Understand React is => Done.
+2. Install Node JS. => Done.
+3. Create a React Project.
