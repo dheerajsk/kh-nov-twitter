@@ -19,6 +19,16 @@
 2. Start react project.
     npm start
 3. What is NPM and how to use it
+4. WHat is difference between npm and npx.
+5. How to create a component.
+6. What is a component.
+7. How to render a component.
+8. import and export.
+9. how react works.
+10. SPA. [Single Page Application]
+11. ANgular, React, Vue.
+
+
 
 
 Folder Structure.
