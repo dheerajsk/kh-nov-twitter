@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './pages/Home/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // React funciton to get div element.
 const root = ReactDOM.createRoot(document.getElementById('root'));

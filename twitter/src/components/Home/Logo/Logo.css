@@ -1,0 +1,30 @@
+
+img{
+    width:30px;
+
+}
+
+ul{
+    margin-top: 12px !important;
+    margin-left: 58px;
+    height: 140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration:none !important;
+    color: black !important;
+    display: flex;
+    align-items: center;
+}
+
+.option{
+    font-size: 20px;
+    font-weight: 700;
+}
