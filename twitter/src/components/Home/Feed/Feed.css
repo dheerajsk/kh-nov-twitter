@@ -1,0 +1,25 @@
+
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 12px;
+}
+
+.search-wrapper{
+    margin: 0 12px;
+    padding: 3px 28px;
+    width: 85%;
+    background-color: rgb(239, 243, 244);
+    border-radius: 18px;
+}
+
+.search-wrapper input{
+    width: 92%;
+    margin-left: 12px;
+    height: 38px;
+    padding:6px;
+    border: none;
+    background-color: transparent;
+}
