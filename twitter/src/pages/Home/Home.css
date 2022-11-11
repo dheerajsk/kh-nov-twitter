@@ -10,11 +10,11 @@
 }
 
 .centerContainer{
-    width: 45%;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
+    width: 42%;
+    border-left: 1px solid rgb(239, 243, 244);
+    border-right: 1px solid rgb(239, 243, 244);
 }
 
 .rightContainer{
-    width: 30%;
+    width: 33%;
 }
