@@ -1,3 +1,4 @@
+import Trend from "../Trend/Trend";
 import "./Feed.css";
 
 function Feed() {
@@ -29,7 +30,6 @@ function Feed() {
         </svg>
       </div>
       {/* Nav bar */}
-      {/* <nav> */}
       <ul className="menus">
         <li>
           <a href="#">For you</a>
@@ -47,13 +47,17 @@ function Feed() {
           <a href="#">Entertainment</a>
         </li>
       </ul>
-      {/* </nav> */}
-
       {/* Banner */}
       <div className="banner">
         <p className="tag">Sports . LIVE</p>
         <p className="text">Fans celebrate Sania Mirza's Birthday 🥳</p>
       </div>
+      {/* Trends */}
+      <Trend />
+      <Trend />
+      <Trend />
+      <Trend />
+      <Trend />
     </div>
   );
 }

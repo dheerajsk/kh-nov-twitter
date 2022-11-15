@@ -1,0 +1,16 @@
+
+.trend{
+    padding: 12px;
+}
+
+.header, .reTweets{
+    font-size: small;
+    margin-bottom: 3px;
+    color: gray;
+}
+
+.trend-text{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}

@@ -41,11 +41,12 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background-image: url("https://pbs.twimg.com/semantic_core_img/1578031205722853376/TGyC7sia?format=jpg&name=900x900");
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,1)),  url("https://pbs.twimg.com/semantic_core_img/1578031205722853376/TGyC7sia?format=jpg&name=900x900");
 }
 
 .tag{
     margin: 12px;
+    margin-bottom: 0px;
     font-size: small;
     color: white;
 }
