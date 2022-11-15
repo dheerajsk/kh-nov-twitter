@@ -23,3 +23,36 @@
     border: none;
     background-color: transparent;
 }
+
+.menus{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin:12px 0 !important;
+    padding: 0px 12px !important;
+    justify-content: space-between;
+}
+
+.banner{
+    padding: 12px;
+    height: 320px;
+    width: 100%;
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url("https://pbs.twimg.com/semantic_core_img/1578031205722853376/TGyC7sia?format=jpg&name=900x900");
+}
+
+.tag{
+    margin: 12px;
+    font-size: small;
+    color: white;
+}
+
+.text{
+    margin: 12px;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+}
