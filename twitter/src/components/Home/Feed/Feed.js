@@ -2,6 +2,21 @@ import Trend from "../Trend/Trend";
 import "./Feed.css";
 
 function Feed() {
+
+  var trendData;
+// trendData[0].header
+  // Read data from json file/api/os/external resources.
+  // fetch function takes some to communicate with external resources.
+  fetch("trend.json")
+    .then(res=>
+      // convert data into json
+      res.json())
+      .then(res=>{
+        // print data on console.
+        console.log(res);
+        trendData=res;
+      })
+
   return (
     <div className="feed-main">
       {/* Search box */}
@@ -53,11 +68,14 @@ function Feed() {
         <p className="text">Fans celebrate Sania Mirza's Birthday 🥳</p>
       </div>
       {/* Trends */}
+      <Trend 
+      header={trendData[0].header} 
+      text={trendData[0].text}
+      retweets={trendData[0].retweets} />
+      {/* <Trend />
       <Trend />
       <Trend />
-      <Trend />
-      <Trend />
-      <Trend />
+      <Trend /> */}
     </div>
   );
 }
