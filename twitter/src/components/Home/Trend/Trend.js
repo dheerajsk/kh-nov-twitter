@@ -5,7 +5,7 @@ import "./Trend.css";
 function Trend(props) {
   return (
     <div className="trend">
-      <p className="header">{props.header}</p>
+      <p className="header">Header{props.header}</p>
       <p className="trend-text">{props.text}</p>
       <p className="reTweets">{props.retweets}</p>
     </div>

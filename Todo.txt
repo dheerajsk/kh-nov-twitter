@@ -11,3 +11,12 @@
 10. Understanding Lifecycle hooks.
 11. useState.
 12. useEffect.
+
+
+Components.
+    => Create. 
+    => Rendered. [data]
+    => Update.
+    => Destory
+
+State => Allows/stores data across different lifecycles of component.
