@@ -1,7 +1,25 @@
 
 
-function sum(a, b){
-    const x=10;
+
+function fetch(path){
+    // reads data
+    res= "trends";
+    convertToJSON(res);
 }
 
-export default sum;
+function convertToJSON(res){
+    // convers to json
+    const result = res.json();
+    assignData(result);
+
+}
+
+function assignData(convertedData){
+    trendData = convertedData;
+}
+
+trendData;
+
+function setTrendData(data){
+    trendData=data;
+}

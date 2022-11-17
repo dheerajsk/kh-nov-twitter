@@ -3,31 +3,36 @@ import "./Feed.css";
 import { useState, useEffect } from "react";
 
 function Feed() {
-  // name of variables, setter function, default value.
-  // it refreshed component everytime state changes.
-  const [trendData, setTrends]=useState([]);
-  const [click, setClick]=useState(0);
 
-// trendData[0].header
-  // Read data from json file/api/os/external resources.
-  // fetch function takes some to communicate with external resources.
-  // manages side effects, and depoendencies.
-  useEffect(
-    ()=>{
-    fetch("trend.json")
-    .then(res=> res.json())
-      .then(res=>{
-        console.log("Data received");
-        setTrends(res);
+  // trendData is a variable to store data.
+  // setTrendData is a setter function to update the variable.
+  // useState converts into a state.
+  // state=> any changes will refresh the component.
+  const [trendData, setTrendData] = useState([]);
+  let data = "My Data";
+
+  // 1. read data from trend.json file.
+  fetch("trend.json")
+  // 2. Data is retrived.
+    .then(res=> {
+      console.log("Raw Data");
+      console.log(res);
+      return res.json();
+    })
+    // 3. Data is converted.
+      .then(convertedData=> {
+        // trendData = convertedData;
+        setTrendData(convertedData);
+        console.log(trendData.length); // 6
       });
-  },[click]);
-  //[] => can include states which will force fetch function to reexecute
 
   return (
     
     <div className="feed-main">
-      <button onClick={()=>{setClick(click+1)}}>Click</button>
-      {trendData && trendData.length}
+      {/* <button onClick={()=>{setClick(click+1)}}>Click</button> */}
+      <h1>{data}</h1>
+      {/* 0 */}
+      <h1>{trendData.length}</h1> 
       {/* Search box */}
       <div className="search-box">
         <div className="search-wrapper">
@@ -78,17 +83,12 @@ function Feed() {
       </div>
       {/* Trends */}
       Trends
-      {
-        trendData.length>0 &&
       <Trend 
-      header={trendData[0].header} 
-      text={trendData[0].text}
-      retweets={trendData[0].retweets} />
-    }
-      {/* <Trend />
+      />
       <Trend />
       <Trend />
-      <Trend /> */}
+      <Trend />
+      <Trend />
     </div>
   );
 }

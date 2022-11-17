@@ -35,3 +35,28 @@ Folder Structure.
     src=> contains source code.
 
 React -> App [js[html], css]
+
+
+Component's Lifecycle.
+
+1. Component Starts Creating.
+2. Component is created.
+3. Component starts rendering./ Updating DOM.
+4. Compnent is rendered. / DOM is updated.
+5. Component is destroyed. [Taken out of memory/ dom]
+6. trendData=> component refreshes.
+
+----C Starts Creating----Created---Rendering----Rendered.
+-----------------------------------Fetch---------------------Data.
+
+Virtual DOM. => 
+    Prevent direct access to dom.
+    Avoids unnecessary DOM updates.
+
+
+Lifecycle hook.
+States. => Box.[trendData] => trigger => refresh component.
+
+
+setter functions => set data to variables.
+
