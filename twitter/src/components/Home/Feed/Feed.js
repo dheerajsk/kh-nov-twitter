@@ -11,6 +11,7 @@ function Feed() {
   const [trendData, setTrendData] = useState([]);
   const [click, setClick] = useState(0);
   const [click2, setClick2] = useState(0);
+
   let data = "My Data";
   console.log("Renders");
   // manages sideeffects of component re-rendering.
@@ -89,14 +90,11 @@ function Feed() {
         <p className="tag">Sports . LIVE</p>
         <p className="text">Fans celebrate Sania Mirza's Birthday 🥳</p>
       </div>
-      {/* Trends */}
-      Trends
-      <Trend 
-      />
-      <Trend />
-      <Trend />
-      <Trend />
-      <Trend />
+      {
+       trendData.map(data=>
+          <Trend content={data} />
+        ) 
+      }
     </div>
   );
 }
