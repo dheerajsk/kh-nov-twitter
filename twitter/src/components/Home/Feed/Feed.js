@@ -9,9 +9,14 @@ function Feed() {
   // useState converts into a state.
   // state=> any changes will refresh the component.
   const [trendData, setTrendData] = useState([]);
+  const [click, setClick] = useState(0);
+  const [click2, setClick2] = useState(0);
   let data = "My Data";
-
-  // 1. read data from trend.json file.
+  console.log("Renders");
+  // manages sideeffects of component re-rendering.
+  useEffect(()=>{
+    // task which needs to be managed.
+    // 1. read data from trend.json file.
   fetch("trend.json")
   // 2. Data is retrived.
     .then(res=> {
@@ -23,13 +28,16 @@ function Feed() {
       .then(convertedData=> {
         // trendData = convertedData;
         setTrendData(convertedData);
-        console.log(trendData.length); // 6
       });
+  }, [click])
+
+  
 
   return (
     
     <div className="feed-main">
-      {/* <button onClick={()=>{setClick(click+1)}}>Click</button> */}
+      <button onClick={()=>{setClick(click+1)}}>Click</button>
+      <button onClick={()=>{setClick2(click+1)}}>Click2</button>
       <h1>{data}</h1>
       {/* 0 */}
       <h1>{trendData.length}</h1> 
