@@ -1,0 +1,30 @@
+
+.tweet-box{
+    width: 100%;
+    height: 100px;
+    border: none;
+    font-size: 24px;
+    color: gray;
+    padding: 12px;
+    resize: none;
+    outline: none;
+}
+
+.reply{
+    display: flex;
+    align-items: center;
+}
+
+
+svg{
+    color:  rgb(29, 155, 240);;
+}
+
+.reply a{
+    margin-left: 12px;
+    color:  rgb(29, 155, 240) !important;
+}
+
+.btn-form{
+    width: 20% !important;
+}

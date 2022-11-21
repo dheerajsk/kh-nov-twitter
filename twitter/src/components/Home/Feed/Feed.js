@@ -37,7 +37,11 @@ function Feed() {
   return (
     
     <div className="feed-main">
-      
+      <button onClick={()=>{setClick(click+1)}}>Click</button>
+      <button onClick={()=>{setClick2(click+1)}}>Click2</button>
+      <h1>{data}</h1>
+      {/* 0 */}
+      <h1>{trendData.length}</h1> 
       {/* Search box */}
       <div className="search-box">
         <div className="search-wrapper">
