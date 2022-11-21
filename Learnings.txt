@@ -60,3 +60,21 @@ States. => Box.[trendData] => trigger => refresh component.
 
 setter functions => set data to variables.
 
+
+
+===To learn===.
+React theories.
+React Architecture/Features.
+Components.
+Virtual DOM.
+JSX.
+Lifecycle hooks.
+useState, 
+useEffect.
+Sharing data using props.
+
+Event handling on forms.
+Navigations and Routings.
+
+
+
