@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NewTweet.css";
 
-function NewTweet() {
+function NewTweet(props) {
   const [tweet, setTweet] = useState("");
 
   function handleTweetChange(event) {
@@ -10,6 +10,7 @@ function NewTweet() {
 
   function handleTweetPost() {
     console.log(tweet);
+    props.notifyNewTweet(tweet);
   }
 
   return (

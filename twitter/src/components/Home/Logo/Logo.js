@@ -1,7 +1,14 @@
 import "./Logo.css";
 import NewTweet from "../NewTweet/NewTweet";
 
-function Logo() {
+function Logo(props) {
+  
+    function newTweetReceived(newTweet) {
+    console.log("This is logo component.");
+    console.log(newTweet);
+    props.notifyNewTweet(newTweet);
+  }
+
   return (
     <div className="options">
       <ul>
@@ -44,7 +51,7 @@ function Logo() {
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <NewTweet />
+        <NewTweet notifyNewTweet={newTweetReceived} />
       </div>
     </div>
   );
