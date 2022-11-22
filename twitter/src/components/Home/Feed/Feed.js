@@ -2,18 +2,14 @@ import Trend from "../Trend/Trend";
 import "./Feed.css";
 import { useState, useEffect } from "react";
 
-function Feed() {
+function Feed(props) {
 
+  console.log(props.tweets);
   // trendData is a variable to store data.
   // setTrendData is a setter function to update the variable.
   // useState converts into a state.
   // state=> any changes will refresh the component.
   const [trendData, setTrendData] = useState([]);
-  const [click, setClick] = useState(0);
-  const [click2, setClick2] = useState(0);
-
-  let data = "My Data";
-  console.log("Renders");
   // manages sideeffects of component re-rendering.
   useEffect(()=>{
     // task which needs to be managed.
@@ -30,18 +26,14 @@ function Feed() {
         // trendData = convertedData;
         setTrendData(convertedData);
       });
-  }, [click])
+  }, [])
 
   
 
   return (
     
     <div className="feed-main">
-      <button onClick={()=>{setClick(click+1)}}>Click</button>
-      <button onClick={()=>{setClick2(click+1)}}>Click2</button>
-      <h1>{data}</h1>
-      {/* 0 */}
-      <h1>{trendData.length}</h1> 
+      
       {/* Search box */}
       <div className="search-box">
         <div className="search-wrapper">
@@ -93,6 +85,16 @@ function Feed() {
       {
        trendData.map(data=>
           <Trend content={data} />
+        ) 
+      }
+      {
+       props.tweets.map(data=>(
+        <div>
+         <h3 className="tweet">{data}</h3>
+         <hr />
+         
+         </div>
+         )
         ) 
       }
     </div>

@@ -3,7 +3,7 @@ import NewTweet from "../NewTweet/NewTweet";
 
 function Logo(props) {
   
-    function newTweetReceived(newTweet) {
+  function newTweetReceived(newTweet) {
     console.log("This is logo component.");
     console.log(newTweet);
     props.notifyNewTweet(newTweet);
@@ -42,6 +42,17 @@ function Logo(props) {
             data-bs-target="#exampleModal">
             Tweet
           </button>
+        </li>
+        <li>
+          <select
+            name=""
+            id=""
+            onChange={(event) => {
+              console.log(event.target.value);
+            }}>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
         </li>
       </ul>
 
