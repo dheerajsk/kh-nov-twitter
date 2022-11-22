@@ -3,8 +3,14 @@ import "./Feed.css";
 import { useState, useEffect } from "react";
 
 function Feed(props) {
-
   console.log(props.tweets);
+  const [alltweets, setTweets]=useState([]);
+  
+  useEffect(()=>{
+    console.log("new tweets");
+    setTweets(props.tweets);
+  },[props.tweets]);
+
   // trendData is a variable to store data.
   // setTrendData is a setter function to update the variable.
   // useState converts into a state.
@@ -88,11 +94,11 @@ function Feed(props) {
         ) 
       }
       {
-       props.tweets.map(data=>(
+       alltweets.map(data=>(
         <div>
          <h3 className="tweet">{data}</h3>
          <hr />
-         
+
          </div>
          )
         ) 
