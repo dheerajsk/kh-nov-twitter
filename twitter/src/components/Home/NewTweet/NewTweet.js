@@ -2,15 +2,21 @@ import { useState } from "react";
 import "./NewTweet.css";
 
 function NewTweet(props) {
-  const [tweet, setTweet] = useState("");
+  const [t, setTweet] = useState({});
 
   function handleTweetChange(event) {
-    setTweet(event.target.value);
+    t.value = event.target.value;
+    setTweet(t);
+  }
+
+  function handleLocationChange(event) {
+    t.location = event.target.value;
+    setTweet(t);
   }
 
   function handleTweetPost() {
-    console.log(tweet);
-    props.notifyNewTweet(tweet);
+    console.log(t);
+    props.notifyNewTweet(t);
   }
 
   return (
@@ -18,8 +24,13 @@ function NewTweet(props) {
       <div className="modal-content">
         <div className="modal-body">
           <form>
+            <input
+              placeholder="Location"
+              onChange={handleLocationChange}
+              type="text"
+              className="form-control"
+            />
             <textarea
-              value={tweet}
               onChange={handleTweetChange}
               placeholder="What's happening !"
               className="tweet-box"></textarea>

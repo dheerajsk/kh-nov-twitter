@@ -3,7 +3,6 @@ import "./Feed.css";
 import { useState, useEffect } from "react";
 
 function Feed(props) {
-  console.log(props.tweets);
   const [alltweets, setTweets]=useState([]);
   
   useEffect(()=>{
@@ -96,9 +95,9 @@ function Feed(props) {
       {
        alltweets.map(data=>(
         <div>
-         <h3 className="tweet">{data}</h3>
+          <label>{data.location}</label>
+         <h3 className="tweet">{data.value}</h3>
          <hr />
-
          </div>
          )
         ) 

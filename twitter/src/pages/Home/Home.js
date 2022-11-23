@@ -10,8 +10,11 @@ function Home(){
 
     function newTweetReceived(newTweet) {
         console.log("This is home component.");
-        tweets.push(newTweet);
-        setTweets([...tweets]);
+        const newTweetsArray=[...tweets];
+        console.log(newTweetsArray);
+        newTweetsArray.push(newTweet);
+        console.log(tweets);
+        setTweets(newTweetsArray);
         // ... extracts items from array and creates new array
         console.log(newTweet);
     }    
